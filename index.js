@@ -131,33 +131,32 @@ const setup = async () => {
     const types = res.data.types.map((type) => type.type.name)
     // console.log("types: ", types);
     $('.modal-body').html(`
-        <div style="width:200px">
-        <img src="${res.data.sprites.other['official-artwork'].front_default}" alt="${res.data.name}"/>
-        <div>
-        <h3>Abilities</h3>
-        <ul>
-        ${res.data.abilities.map((ability) => `<li>${ability.ability.name}</li>`).join('')}
-        </ul>
-        </div>
+        <div id="pokeImage">
+          <img src="${res.data.sprites.other['official-artwork'].front_default}" alt="${res.data.name}"/>
+          <div>
+            <h3>Abilities</h3>
+            <ul>
+              ${res.data.abilities.map((ability) => `<li>${ability.ability.name}</li>`).join('')}
+            </ul>
+          </div>
 
-        <div>
-        <h3>Stats</h3>
-        <ul>
-        ${res.data.stats.map((stat) => `<li>${stat.stat.name}: ${stat.base_stat}</li>`).join('')}
-        </ul>
+          <div>
+            <h3>Stats</h3>
+            <ul>
+              ${res.data.stats.map((stat) => `<li>${stat.stat.name}: ${stat.base_stat}</li>`).join('')}
+            </ul>
+          </div>
 
-        </div>
-
-        </div>
-          <h3>Types</h3>
-          <ul>
-          ${types.map((type) => `<li>${type}</li>`).join('')}
-          </ul>
-      
+          <div>
+            <h3>Types</h3>
+            <ul>
+              ${types.map((type) => `<li>${type}</li>`).join('')}
+            </ul>
+          </div>
         `)
     $('.modal-title').html(`
+        <h5>#${res.data.id}</h5>
         <h2>${res.data.name.charAt(0).toUpperCase() + res.data.name.substring(1)}</h2>
-        <h5>${res.data.id}</h5>
         `)
   })
 
