@@ -14,21 +14,21 @@ const updatePaginationDiv = (currentPage, numPages) => {
   // Previous Button
   if (currentPage > 1) {
     $("#pagination").append(`
-      <button class="btn btn-primary page ml-1 numberedButtons" value="${currentPage - 1}">&laquo;</button>
+      <button class="btn btn-danger page ml-1 numberedButtons" value="${currentPage - 1}">&laquo;</button>
     `);
   };
 
   // Shows current page button as active
   for (let i = startPage; i <= endPage; i++) {
     $("#pagination").append(`
-      <button class="btn btn-primary page ml-1 numberedButtons ${i === currentPage ? 'active' : ''}" value="${i}">${i}</button>
+      <button id="active-btn" class="btn btn-danger page ml-1 numberedButtons ${i === currentPage ? 'active' : ''}" value="${i}">${i}</button>
     `);
   };
 
   // Next Button
   if (endPage < numPages) {
     $("#pagination").append(`
-    <button class="btn btn-primary page ml-1 numberedButtons" value="${currentPage + 1}">&raquo;</button>
+    <button class="btn btn-danger page ml-1 numberedButtons" value="${currentPage + 1}">&raquo;</button>
   `);
   }
 };

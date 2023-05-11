@@ -1,23 +1,19 @@
-body{
+body {
   height: 100vh;
   background-image: linear-gradient(0deg, #ffffff 50%, #ff0000dd 90%);
-  }
+}
 
 button {
-  background-color: red !important;
   border: none !important;
   cursor: pointer;
-  }
-  
-  button:hover{
-    background-color: blue !important;
-  }
-  
-  button:active{
-    background-color: black !important;
-  }
+}
 
-#filter{
+.btn-danger:not(:disabled):not(.disabled).active {
+  background-color: #ffffff !important;
+  color: black;
+}
+
+#filter {
   width: 60%;
   margin: auto;
   margin-top: 10vh;
@@ -28,7 +24,7 @@ button {
   border-radius: 10px;
 }
 
-#numDisplay{
+#numDisplay {
   text-align: center;
   color: white;
   width: 100%;
@@ -55,7 +51,7 @@ button {
   justify-content: center;
 }
 
-#pagination{
+#pagination {
   width: 100%;
   text-align: center;
   margin: 1em;
@@ -66,7 +62,7 @@ button {
   height: 100%;
 }
 
-#pokeImage{
+#pokeImage {
   width: 60%;
   margin: auto;
 }
